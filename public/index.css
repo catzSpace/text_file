@@ -1,0 +1,30 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+input{
+    margin-top: 1em;
+    height: 2em;
+    border-radius: 0.5vh;
+}
+
+.send{
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid blueviolet;
+}
+
+p{
+    position: relative;
+    top: 1em;
+    opacity: 80%;
+}
+
+.actions{
+    width: 79%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

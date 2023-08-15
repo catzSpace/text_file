@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>form</title>
+</head>
+<body style="
+    font-family: roboto, 'arial';
+    display: flex;
+    justify-content: center;
+">
+    <div style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50em;
+    ">
+        <h2>Register User Name</h2>
+
+        <form action="/file" method="post">
+            <p>Name</p>
+            <input type="text" name="user" placeholder="name to save">
+            <input type="submit" value="send" class="send">
+        </form>
+    
+        <div class="actions">
+            <a href="/download" style="
+                text-decoration: none;
+                color: blueviolet;
+                margin-top: 2em;
+            ">download</a>
+    
+            <a href="/clear" style="
+                text-decoration: none;
+                color: blueviolet;
+                margin-top: 2em;
+            ">Clear Info</a>
+        </div>
+    </div>
+    
+</body>
+</html>
