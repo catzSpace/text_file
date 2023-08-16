@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>form</title>
+    <script defer src="event.js"></script>
+    <link rel="icon" href="icons/icon.png">
+    <title>Write</title>
 </head>
 <body style="
     font-family: roboto, 'arial';
     display: flex;
     justify-content: center;
+    user-select: none;
 ">
     <div style="
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50em;
+    width: 40em;
     ">
-        <h2>Register User Name</h2>
+        <h2>Save Users to Txt File</h2>
 
         <form action="/file" method="post">
-            <p>Name</p>
-            <input type="text" name="user" placeholder="name to save">
-            <input type="submit" value="send" class="send">
+            <p>Write Your Info</p>
+            <input type="text" name="user" class="space name" placeholder="name to save">
+            <input type="password" name="pass" class="pass" placeholder="password to save">
+            <input type="submit" value="send" class="send space">
         </form>
+        <div class="event"></div>
     
         <div class="actions">
             <a href="/download" style="

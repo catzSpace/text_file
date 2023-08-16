@@ -6,14 +6,16 @@ const write = query.post('/file', (req, res) => {
     
     datos = req.body
     let name = 'user: ' + datos.user 
+    let pass = 'password: ' + datos.pass
 
-    if (datos.user == ''){
-        console.log('empty')
-        res.redirect('/');
+    if (datos.user == '' || datos.pass == ''){
+        console.log('void')
     } else {
-        fs.appendFile('./src/info.txt', '\n' + name, (err) => {
-            if (err) {console.log(err)}
-    
+        fs.appendFile('./src/info.txt', '\n' + name + '\n' + pass + '\n', (err) => {
+            if (err) {
+                console.log(err)
+            }
+
             const users = fs.readFileSync('./src/info.txt', 'utf-8')
             const lines = users.split('\n')
             for (const line of lines){

@@ -1,13 +1,20 @@
 form{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
 }
 
-input{
+.space{
     margin-top: 1em;
     height: 2em;
     border-radius: 0.5vh;
+    border: 1px solid grey;
+}
+
+.pass{
+    height: 2em;
+    border-radius: 0.5vh;
+    border: 1px solid grey;
 }
 
 .send{
@@ -23,8 +30,12 @@ p{
 }
 
 .actions{
-    width: 79%;
+    width: 69%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.red{
+    color: red;
 }
