@@ -1,9 +1,17 @@
-# text_file
+# Save users to txt file
 
 creator: caztspace
 
 thx for you coding!
 
+_____
+# usage
+
+download the project, install the corresponding dependencies and run the following command:
+
+```lua
+npm run dev
+```
 ______
 a web site to save usernames in txt files, allows you to download this log and delete it when you see fit.
 
@@ -24,18 +32,20 @@ const write = query.post('/file', (req, res) => {
     
     datos = req.body
     let name = 'user: ' + datos.user 
+    let pass = 'password: ' + datos.pass
 
-    if (datos.user == ''){
-        console.log('empty')
-        res.redirect('/');
+    if (datos.user == '' || datos.pass == ''){
+        console.log('void');
     } else {
-        fs.appendFile('./src/info.txt', '\n' + name, (err) => {
-            if (err) {console.log(err)}
-    
+        fs.appendFile('./src/info.txt', '\n' + name + '\n' + pass + '\n', (err) => {
+            if (err) {
+                console.log(err);
+            }
+
             const users = fs.readFileSync('./src/info.txt', 'utf-8')
             const lines = users.split('\n')
             for (const line of lines){
-                console.log(line)
+                console.log(line);
             }
             res.redirect('/');
         })
@@ -45,4 +55,11 @@ const write = query.post('/file', (req, res) => {
 
 module.exports = write;
 ```
-![Captura de pantalla 2023-08-15 121443](https://github.com/catzSpace/text_file/assets/133279982/117eb6cd-c468-4796-8812-efe1b074ef5c)
+
+# Normal:
+
+![Captura de pantalla 2023-08-16 210732](https://github.com/catzSpace/text_file/assets/133279982/86bb2957-ff79-41cd-928b-e9b5f7ae1f3e)
+
+# If the fields are empty:
+
+![Captura de pantalla 2023-08-16 210750](https://github.com/catzSpace/text_file/assets/133279982/5eeed57d-f39b-4a4a-861a-2e9d308c1436)
