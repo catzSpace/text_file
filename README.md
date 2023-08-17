@@ -5,13 +5,15 @@ creator: caztspace
 thx for you coding!
 
 _____
-# usage
+# How to use
 
-download the project, install the corresponding dependencies and run the following command:
+download the project, install the corresponding dependencies, run the following command:
 
 ```lua
 npm run dev
 ```
+
+And open in your browser the localhost:4000.
 ______
 a web site to save usernames in txt files, allows you to download this log and delete it when you see fit.
 
